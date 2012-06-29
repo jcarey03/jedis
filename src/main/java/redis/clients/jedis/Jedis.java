@@ -2807,8 +2807,8 @@ public class Jedis extends BinaryJedis implements JedisCommands {
 	if (result instanceof List<?>) {
 	    List<?> list = (List<?>) result;
 	    List<Object> listResult = new ArrayList<Object>(list.size());
-	    for (Object bin : list) {
-                listResult.add(getEvalResultHelper(bin));
+	    for (Object elem : list) {
+                listResult.add(getEvalResultHelper(elem));
             }
 	    return listResult;
 	}
